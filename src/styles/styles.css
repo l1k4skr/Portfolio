@@ -1,0 +1,112 @@
+
+
+
+/* paragraphs */
+
+
+
+
+
+
+#contact {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px 0 #00000033;
+    text-align: center;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%; /* Para que los inputs ocupen todo el ancho del form */
+    box-sizing: border-box; /* Para que el padding no afecte al ancho total */
+}
+
+.form-group label {
+    align-items: start;        
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 700; /* Para que las etiquetas destaquen */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%; /* Para que ocupen todo el ancho del form-group */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd; /* Un borde ligero para los inputs */
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.form-group textarea {
+    resize: none; /* Permite al usuario ajustar el tamaño verticalmente */
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+button:hover {
+    background-color: #555; /* Un efecto sutil al pasar el ratón */
+}
+
+/* Footer */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-heading {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.contact-details, 
+.social-links, 
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-link, 
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-link:hover, 
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+/* Responsive */

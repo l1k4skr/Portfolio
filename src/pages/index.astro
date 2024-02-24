@@ -1,0 +1,105 @@
+---
+import Layout from "../Layouts/Layout.astro"
+import Header from "../components/Header.astro"
+import About from "../components/About.astro"
+import Proyects from "../components/Proyects.astro"
+// Supports weights 100-900
+import '@fontsource-variable/montserrat';
+// Supports weights 100-900
+import '@fontsource-variable/roboto-slab';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const props = {
+	title: "Andrés Portfolio",
+	description: "Andrés dev portfolio",
+}
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{props.title}</title>
+	</head>
+	<body>
+		<Layout>
+			<Header />
+			<About />
+            <Proyects />
+		</Layout>
+	</body>
+</html>
+<style is:global>
+
+:root {
+	--color-primario: #333; /* Color principal */
+	--color-secundario: #555; /* Color secundario */
+}   
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: grid;
+    grid-template-rows: 200px 1fr 200px;
+    min-height: 100vh;
+    justify-items: center;
+    background-color: #363636;
+}
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+}
+
+/* titles */
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.5em;
+}
+
+/* containers */
+.container {
+    width: 80%;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.title {
+    font-family: 'Montserrat Variable';
+    text-align: center;
+    margin: 20px;
+}
+
+.subtitle {
+    font-family: 'Roboto Slab Variable';
+    text-align: center;
+    margin: 20px;
+}
+.micro-title {
+    text-align: center;
+}
+
+</style>
