@@ -1,0 +1,233 @@
+:root {
+    --color-primario: #333; /* Color principal */
+    --used-with: 80%; /* Porcentaje de uso de la variable */
+    --box-border-radius: 5px; /* Radio de borde de los contenedores */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    justify-items: center;
+    background-color: #363636;
+}
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: #231b1b;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    transition: 0.2s ease;
+    color: #f4f4f496;
+}
+
+/* titles */
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.5em;
+}
+.title {
+    font-family: Montserrat;
+    text-align: center;
+    margin: 20px;
+}
+.subtitle {
+    font-family: Roboto Slab;
+    text-align: center;
+    margin: 20px;
+}
+.micro-title {
+    text-align: center;
+}
+
+/* paragraphs */
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+}
+#about-paragraph {
+    margin: 20px;
+    text-align: center;
+}
+#blue-gradient-bold{
+    font-weight: 1000;
+    background-image :linear-gradient(90deg, rgb(28, 111, 19) 12%, rgb(13, 255, 0) 49%, rgb(28, 111, 19) 88%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Safari Compatibility */
+}
+
+/* containers */
+.container {
+    width: var(--used-with);
+    border-radius: var(--box-border-radius)
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+.cards {
+    width: 100%;
+    height: 100%;
+}
+
+#about {
+    background-color: #fff;
+    padding: 20px;
+    padding-top: 0px;
+    box-shadow: 0 0 10px 0 #00000033;
+    > p{
+        text-align: justify;
+    }
+}
+
+#proyects-box{
+    background-color: #fff;
+    margin: 20px auto;
+}
+
+
+
+#contact {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px 0 #00000033;
+    text-align: center;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%; /* Para que los inputs ocupen todo el ancho del form */
+    box-sizing: border-box; /* Para que el padding no afecte al ancho total */
+}
+
+.form-group label {
+    align-items: start;        
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 700; /* Para que las etiquetas destaquen */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%; /* Para que ocupen todo el ancho del form-group */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd; /* Un borde ligero para los inputs */
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.form-group textarea {
+    resize: none; /* Permite al usuario ajustar el tamaño verticalmente */
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+button:hover {
+    background-color: #555; /* Un efecto sutil al pasar el ratón */
+}
+
+/* Footer */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-heading {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.contact-details, 
+.social-links, 
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-link, 
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-link:hover, 
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+/* Responsive */
