@@ -4,13 +4,13 @@
 
 <footer id="footer">
     <div id="footer-content">
-        <section id="contact-info">
+        <section id="contact-info media-container">
             <h3 id="footer-heading">Contacto</h3>
             <p id="contact-details">Email: andres@example.com</p>
             <p id="contact-details">Teléfono: +56 9 1234 5678</p>
         </section>
 
-        <section id="social-media">
+        <section id="social-media media-container">
             <h3 id="footer-heading">Redes Sociales</h3>
             <ul id="social-links">
                 <li><a href="https://linkedin.com/in/andresperez" id="social-link">LinkedIn</a></li>
@@ -19,7 +19,7 @@
             </ul>
         </section>
 
-        <section id="quick-links">
+        <section id="quick-links media-container">
             <h3 id="footer-heading">Enlaces Rápidos</h3>
             <ul id="footer-nav">
                 <li><a href="#about" id="footer-link">Sobre mí</a></li>
@@ -39,17 +39,22 @@
 
 <style>
 #footer {
-    background-color: #333;
+    background-color: #031633;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
 
 #footer-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (max-width: 768px) {
+    #footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
 }
 
 #footer-heading {
