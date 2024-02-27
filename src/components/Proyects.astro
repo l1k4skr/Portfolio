@@ -1,63 +1,60 @@
 ---
-// Aqui debe ir el contenido de las cartas de los proyectos
+import Proyect from '../components/Proyect.astro'
+
+const exampleProjects = [
+    {
+        title: 'Proyecto 1',
+        description: 'Descripción del proyecto 1',
+        image: 'https://via.placeholder.com/150'
+    },
+    {
+        title: 'Proyecto 2',
+        description: 'Descripción del proyecto 2',
+        image: 'https://via.placeholder.com/150'
+    },
+    {
+        title: 'Proyecto 3',
+        description: 'Descripción del proyecto 3',
+        image: 'https://via.placeholder.com/150'
+    },
+    {
+        title: 'Proyecto 4',
+        description: 'Descripción del proyecto 4',
+        image: 'https://via.placeholder.com/150'
+    }
+]
+
 ---
 
 <section class="container" id="proyects-box">
-  <h2 class="subtitle">Proyects</h2>
-  <div class="grid-container" id="grid-container-proyects">
-    <div class="card cards">
-      <img src="..." class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
+    <h2 class="subtitle">Proyectos</h2>
+    <div class="grid-container" id="grid-container-proyects">
+        <Proyect title={exampleProjects[0].title} text={exampleProjects[0].description} img={exampleProjects[0].image}/>
+        <Proyect title={exampleProjects[1].title} text={exampleProjects[1].description} img={exampleProjects[1].image}/>
+        <Proyect title={exampleProjects[2].title} text={exampleProjects[2].description} img={exampleProjects[2].image}/>
+        <Proyect title={exampleProjects[3].title} text={exampleProjects[3].description} img={exampleProjects[3].image}/>
     </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-  </div>
 </section>
 
 <style>
-  #proyects-box{
-    background-color: #fff;
-    margin: 20px auto;
-  }
-  #grid-container-proyects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 20px;
-    margin: 20px;
-  }
-  #cards {
-    width: 100%;
-    height: 100%;
-  }
+    #proyects-box {
+        background-color: #fff;
+        margin: 20px auto;
+    }
+    #grid-container-proyects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+        margin: 20px;
+    }
+    #cards {
+        width: 100%;
+        height: 100%;
+    }
+    @media screen and (max-width: 768px) {
+        #grid-container-proyects {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
