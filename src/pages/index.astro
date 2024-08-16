@@ -4,6 +4,7 @@ import About from "../components/About.astro"
 import Contact from "../components/Contact.astro"
 import Proyects from "../components/Proyects.astro"
 import Footer from "../components/Footer.astro"
+import Index1 from "../components/index_1.astro"
 // Supports weights 100-900
 import '@fontsource-variable/montserrat'
 // Supports weights 100-900
@@ -14,80 +15,54 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '@fontsource-variable/roboto-slab';
 import 'bootstrap/dist/css/bootstrap.min.css';
 ---
-<Layout>
+<!-- <Layout>
     <About/>
     <Proyects/>
     <Contact/>
-</Layout>
+</Layout> -->
 
+<Index1/>
 
 <style is:global>
 
 :root {
-	--color-primario: #052c65; /* Color principal */
-	--color-secundario: #555; /* Color secundario */
-}   
-html {
-    scroll-behavior: smooth !important;
-}
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body {
-    font-family: 'Open Sans', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-main {
-    display: grid;
-    height: 100%;
-    justify-items: center;
-    background-color: var(--color-primario);
-}
-p {
-    margin: 0;
-    padding: 0;
-    line-height: 1.5em;
-}
-
-/* titles */
-h1, h2, h3, h4, h5, h6 {
-    color: #000;
-    margin: 0;
-    padding: 0;
-}
-h1 {
-    font-size: 2.5em;
-}
-h2 {
-    font-size: 2em;
-}
-h3 {
-    font-size: 1.5em;
-}
-
-/* containers */
-.container {
-    width: 80%;
-    border-radius: 10px;
-    margin: 20px auto;
-}
-
-.title {
-    font-family: 'Montserrat Variable';
-    text-align: center;
-    margin: 20px;
-}
-
-.subtitle {
-    font-family: 'Roboto Slab Variable';
-    text-align: center;
-    margin: 20px;
-}
-.micro-title {
-    text-align: center;
-}
-
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 142 86% 28%;
+        --primary-foreground: 356 29% 98%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 45%;
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 72% 51%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 142 86% 28%;
+        --chart-1: 142 88% 28%;
+        --chart-2: 140 74% 24%;
+        --chart-3: 139 65% 20%;
+        --chart-4: 137 55% 15%;
+        --chart-5: 141 40% 9%;
+        --radius: 0.5rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Inter', sans-serif;
+        --font-sans-serif: 'Inter';
+    }
+    body {
+        font-family: 'Inter', sans-serif;
+        --font-sans-serif: 'Inter';
+    }
 </style>
