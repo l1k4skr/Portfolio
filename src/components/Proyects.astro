@@ -26,35 +26,33 @@ const exampleProjects = [
 
 ---
 
-<section class="container" id="proyects-box">
-    <h2 class="subtitle">Proyectos</h2>
-    <div class="grid-container" id="grid-container-proyects">
-        <Proyect title={exampleProjects[0].title} text={exampleProjects[0].description} img={exampleProjects[0].image}/>
-        <Proyect title={exampleProjects[1].title} text={exampleProjects[1].description} img={exampleProjects[1].image}/>
-        <Proyect title={exampleProjects[2].title} text={exampleProjects[2].description} img={exampleProjects[2].image}/>
-        <Proyect title={exampleProjects[3].title} text={exampleProjects[3].description} img={exampleProjects[3].image}/>
+<section id="projects" class="py-12 md:py-24 lg:py-32">
+    <div class="container px-4 md:px-6">
+        <div
+            class="flex flex-col items-center justify-center space-y-4 text-center"
+        >
+            <div class="space-y-2">
+                <h2
+                    class="text-3xl font-bold tracking-tighter sm:text-5xl"
+                >
+                    My Projects
+                </h2>
+                <p
+                    class="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+                >
+                    Here are some of the projects I've worked on. Each
+                    one showcases my skills in building modern,
+                    responsive, and user-friendly web applications.
+                </p>
+            </div>
+        </div>
+        <div
+            class="mx-auto grid max-w-5xl gap-6 py-12 sm:grid-cols-2 lg:grid-cols-3"
+        >
+            <Proyect title={exampleProjects[0].title} text={exampleProjects[0].description} img={exampleProjects[0].image}/>
+            <Proyect title={exampleProjects[1].title} text={exampleProjects[1].description} img={exampleProjects[1].image}/>
+            <Proyect title={exampleProjects[2].title} text={exampleProjects[2].description} img={exampleProjects[2].image}/>
+            <Proyect title={exampleProjects[3].title} text={exampleProjects[3].description} img={exampleProjects[3].image}/>
+        </div>
     </div>
 </section>
-
-<style>
-    #proyects-box {
-        background-color: #fff;
-        margin: 20px auto;
-    }
-    #grid-container-proyects {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        padding: 20px;
-        margin: 20px;
-    }
-    #cards {
-        width: 100%;
-        height: 100%;
-    }
-    @media screen and (max-width: 768px) {
-        #grid-container-proyects {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>

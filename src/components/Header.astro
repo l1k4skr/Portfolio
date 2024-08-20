@@ -1,54 +1,41 @@
----
-
----
-
 <header class="px-4 lg:px-6 h-14 flex items-center">
-    <a href="#" class="flex items-center justify-center" prefetch={false}>
-        <MountainIcon class="h-6 w-6" />
-        <span class="sr-only">John Doe's Portfolio</span>
+    <a class="flex items-center justify-center" href="#">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6"
+        >
+            <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+        </svg>
+        <span class="sr-only">Andres Perez's Portfolio</span>
     </a>
     <nav class="ml-auto flex gap-4 sm:gap-6">
         <a
-            href="#"
             class="text-sm font-medium hover:underline underline-offset-4"
-            prefetch={false}
+            href="#"
         >
             About
         </a>
         <a
-            href="#"
             class="text-sm font-medium hover:underline underline-offset-4"
-            prefetch={false}
+            href="#"
         >
             Projects
         </a>
         <a
-            href="#"
             class="text-sm font-medium hover:underline underline-offset-4"
-            prefetch={false}
+            href="#"
         >
             Contact
         </a>
     </nav>
 </header>
 
-<style>
-    span {
-        background-color: #007bff;
-        border-radius: 5px;
-    }
-    button:focus,
-    span:focus {
-        border: none;
-    }
 
-    nav {
-        background-color: #031633;
-    }
-    a {
-        color: white;
-    }
-    a:hover {
-        color: #c2c2c2;
-    }
-</style>

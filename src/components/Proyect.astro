@@ -1,22 +1,22 @@
 ---
-const {title, text, alt, button_link, img} = Astro.props;
+const { title, text, alt, button_link, img } = Astro.props
 ---
 
-<div class="card cards">
-    <img src={img} class="card-img-top" alt={alt}/>
-    <div class="card-body">
-        <h5 class="card-title">{title}</h5>
-        <p class="card-text">
+<div
+    class="rounded-lg border bg-card text-card-foreground shadow-sm w-full"
+    data-v0-t="card"
+>
+    <img
+        src={img}
+        width="550"
+        height="310"
+        alt={alt}
+        class="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
+    />
+    <div class="p-4">
+        <h3 class="text-lg font-semibold">{title}</h3>
+        <p class="text-muted-foreground">
             {text}
         </p>
-        <a href={button_link} class="btn btn-primary">Go to proyect</a>
     </div>
 </div>
-
-<style>
-    img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-    }
-</style>
