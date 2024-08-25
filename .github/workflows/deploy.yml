@@ -16,7 +16,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Puedes ajustar la versión de Node.js aquí
+        node-version: '18.14.1'  # Actualiza a la versión de Node.js que sea compatible
 
     - name: Install dependencies
       run: npm install
@@ -29,4 +29,3 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist  # Asegúrate de que 'dist' es tu carpeta de salida
-
